@@ -7,6 +7,7 @@ dotenv.config();
 
 //routes
 const userRoutes = require('./routes/userRoutes');
+const postRoutes = require('./routes/postRoutes');
 
 //connect db
 connectDB();
@@ -17,6 +18,7 @@ app.use(bodyParser.json());
 
 //route middlewares
 app.use(`/wordvoyage/user`, userRoutes)
+app.use(`/wordvoyage/posts`, postRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, console.log(`server started on port ${PORT}...`));

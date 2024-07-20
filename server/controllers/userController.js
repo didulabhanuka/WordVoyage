@@ -1,5 +1,5 @@
 const User = require(`../models/userModel`);
-const jet = require(`jsonwebtoken`);
+const jwt = require(`jsonwebtoken`);
 const bcrypt = require(`bcryptjs`);
 const {registerValidation, loginValidation} = require(`../utils/validation`);
 
